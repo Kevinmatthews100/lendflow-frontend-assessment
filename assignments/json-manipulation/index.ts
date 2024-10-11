@@ -46,7 +46,9 @@ const part3 = () => {
  * @description How many women’s products are out of stock, broken down by color?
  */
 const part4 = () => {
-  const colors = productService.getWithFilters({ in_stock: false }).map((p) => p.color)
+  const colors = productService
+    .getWithFilters({ in_stock: false, gender: 'female' })
+    .map((p) => p.color)
   const frequencyMap = new Map<string, number>()
 
   for (const color of colors) {
