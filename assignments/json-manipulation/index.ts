@@ -47,15 +47,15 @@ const part3 = () => {
  */
 const part4 = () => {
   const colors = productService.getWithFilters({ in_stock: false }).map((p) => p.color)
-  const colorFrequency = {}
+  const frequencyMap = new Map()
 
   for (const color of colors) {
-    const currentCount = colorFrequency[color] ?? 0
+    const currentCount = frequencyMap.get(color) ?? 0
 
-    colorFrequency[color] = currentCount + 1
+    frequencyMap.set(color, currentCount + 1)
   }
 
-  return colorFrequency
+  return Object.fromEntries(frequencyMap)
 }
 
 const part1Result = part1()
