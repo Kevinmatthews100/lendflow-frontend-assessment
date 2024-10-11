@@ -58,12 +58,7 @@ const part4 = () => {
   return Object.fromEntries(frequencyMap)
 }
 
-const part1Result = part1()
-const part2Result = part2()
-const part3Result = part3()
-const part4Result = part4()
-
-console.log('Part 1: ', part1Result)
-console.log('Part 2: ', part2Result)
-console.log('Part 3: ', part3Result)
-console.log('Part 4: ', part4Result)
+console.log('Part 1: ', part1())
+console.log('Part 2: ', part2())
+console.log('Part 3: ', part3())
+console.log('Part 4: ', part4())
