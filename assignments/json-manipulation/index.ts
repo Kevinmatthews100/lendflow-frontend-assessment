@@ -13,7 +13,7 @@ const part1 = () =>
  */
 const part2 = () => {
   const categories = productService.getAll().flatMap((product) => product.categories)
-  const frequencyMap = new Map()
+  const frequencyMap = new Map<string, number>()
 
   for (const category of categories) {
     const currentCount = frequencyMap.get(category) ?? 0
@@ -47,7 +47,7 @@ const part3 = () => {
  */
 const part4 = () => {
   const colors = productService.getWithFilters({ in_stock: false }).map((p) => p.color)
-  const frequencyMap = new Map()
+  const frequencyMap = new Map<string, number>()
 
   for (const color of colors) {
     const currentCount = frequencyMap.get(color) ?? 0
