@@ -1,16 +1,16 @@
 <script setup lang="ts">
 defineProps<{
   cardText: {
-    type: String,
-    required: true,
-  },
+    type: String
+    required: true
+  }
   isInFocus: {
-    type: Boolean,
-    default: false,
-  },
+    type: Boolean
+    default: false
+  }
 }>()
 
-const height = (Math.random(Math.floor(Math.random() * 10)) + 1) * 100;
+const height = (Math.random(Math.floor(Math.random() * 10)) + 1) * 100
 </script>
 
 <template>
