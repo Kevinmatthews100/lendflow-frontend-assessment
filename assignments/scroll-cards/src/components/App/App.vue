@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref, useTemplateRef } from 'vue'
-import Card from './Card.vue'
+import Card from '../Card/Card.vue'
 
 const cards = Array.from(Array(100), (_, x) => `Card ${x + 1}`)
 
@@ -76,11 +76,12 @@ onMounted(() => {
 <template>
   <div>
     <Card
-      v-for="(card, id) in cards"
-      ref="card-refs"
       :cardText="card"
+      :id="`card-${id}`"
       :isInFocus="focusedCardId === id"
       :key="id"
+      ref="card-refs"
+      v-for="(card, id) in cards"
     >
       <p>
         <span :id="`card-${id}-text`">{{ card }}</span>
