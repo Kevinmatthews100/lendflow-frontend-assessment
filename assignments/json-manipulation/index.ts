@@ -17,7 +17,6 @@ const part2 = () => {
 
   for (const category of categories) {
     const currentCount = frequencyMap.get(category) ?? 0
-
     frequencyMap.set(category, currentCount + 1)
   }
 
@@ -53,14 +52,13 @@ const part4 = () => {
 
   for (const color of colors) {
     const currentCount = frequencyMap.get(color) ?? 0
-
     frequencyMap.set(color, currentCount + 1)
   }
 
   return Object.fromEntries(frequencyMap)
 }
 
-console.log('Part 1: ', part1())
-console.log('Part 2: ', part2())
-console.log('Part 3: ', part3())
-console.log('Part 4: ', part4())
+console.log('Part 1:', part1())
+console.log('Part 2:', part2())
+console.log('Part 3:', part3())
+console.log('Part 4:', part4())
