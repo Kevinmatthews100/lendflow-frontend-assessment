@@ -20,10 +20,10 @@ bun install
 
 There are 4 assignments included in this repository, found in the `assignments` directory. Valid assignment names, which are used in the commands below, are as follows:
 
-- watching-an-object
-- typescript-type-definition
-- json-manipulation
-- scroll-cards
+- `watching-an-object`
+- `typescript-type-definition`
+- `json-manipulation`
+- `scroll-cards`
 
 ### Running an assignment
 
@@ -43,7 +43,7 @@ Note that the `./` is required when providing the path. Without it, Bun will thi
 
 ### Running `scroll-cards`
 
-To start a dev server for the scroll-cards assignment, cd to `./assignments-scroll-cards` and run `bun run dev`.
+To start a dev server for the scroll-cards assignment, cd to `./assignments/scroll-cards` and run `bun run dev`.
 
 ### Running tests
 
