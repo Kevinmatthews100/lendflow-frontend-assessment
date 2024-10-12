@@ -19,8 +19,8 @@ onMounted(() => {
 
   /**
    * @description An array of ids of cards that are *currently* within the viewport.
-   * Note that my implementation does expect that this array is ordered, the id that
-   * most recently entered the viewport should be pushed to the *end* of the array.
+   * Note my implementation expects that the id of the card that most recently
+   * entered the viewport is pushed to the *end* of the array.
    */
   const intersectingCardIds: number[] = []
 
