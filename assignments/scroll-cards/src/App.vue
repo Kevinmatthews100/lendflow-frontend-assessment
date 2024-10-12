@@ -5,7 +5,7 @@ import Card from './Card.vue'
 const cards = Array.from(Array(100), (_, x) => `Card ${x + 1}`)
 
 // Add code to this file to complete the task
-const cardRefs = useTemplateRef('card-ref')
+const cardRefs = useTemplateRef('card-refs')
 const focusedCardId = ref(0)
 
 onMounted(() => {
@@ -77,7 +77,7 @@ onMounted(() => {
   <div>
     <Card
       v-for="(card, id) in cards"
-      ref="card-ref"
+      ref="card-refs"
       :cardText="card"
       :isInFocus="focusedCardId === id"
       :key="id"
