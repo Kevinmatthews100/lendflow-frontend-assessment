@@ -63,7 +63,7 @@ onMounted(() => {
 
   const intersectionObserver = new IntersectionObserver(onCardTextEntersOrExitsViewport, {
     root: null,
-    rootMargin: '8px',
+    rootMargin: '0px',
     threshold: 1.0
   })
 
@@ -90,4 +90,8 @@ onMounted(() => {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+:global(body) {
+  margin: 0;
+}
+</style>

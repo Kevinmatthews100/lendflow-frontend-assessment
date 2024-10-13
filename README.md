@@ -43,7 +43,7 @@ Note that the `./` is required when providing the path. Without it, Bun will thi
 
 ### Running `scroll-cards`
 
-To start a dev server for the scroll-cards assignment, cd to `./assignments/scroll-cards` and run `bun run dev`.
+To start a dev server for the scroll-cards assignment, cd to `./assignments/scroll-cards` and run `bun run dev`. See that assignments package.json for all available scripts.
 
 ### Running tests
 
@@ -59,4 +59,6 @@ If you wish to run tests for a single assignment only, pass the assignment to vi
 bun run vitest ./assignments/<assignment-name>
 ```
 
-Note that tests for `typescript-type-definition` are statically analyized, and can not be invoked by vitest. See the [vitest guide on testing types](https://vitest.dev/guide/testing-types#testing-types) for more information.
+- Note that tests for `typescript-type-definition` are statically analyized, and can not be invoked by vitest. See the [vitest guide on testing types](https://vitest.dev/guide/testing-types#testing-types) for more information.
+
+- `scroll-cards` includes end to end testing with cypress. To run, cd to the scroll-cards assignment, start a dev server with `bun run dev`, and then in a new terminal cd to the assignment again and run `bun run test:e2e`.
