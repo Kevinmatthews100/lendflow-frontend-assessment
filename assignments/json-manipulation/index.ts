@@ -1,5 +1,9 @@
 import { productService } from './productService'
 
+type Part2Options = {
+  ignoreDuplicateCategories: boolean
+}
+
 /**
  * @description Which products are out of stock, not on sale, and under $20?
  */
@@ -11,8 +15,15 @@ const part1 = () =>
 /**
  * @description What is the most commonly used category?
  */
-const part2 = () => {
-  const categories = productService.getAll().flatMap((product) => product.categories)
+const part2 = ({ ignoreDuplicateCategories }: Part2Options) => {
+  const categories = productService.getAll().flatMap((product) => {
+    if (ignoreDuplicateCategories) {
+      return [...new Set(product.categories)]
+    }
+
+    return product.categories
+  })
+
   const frequencyMap = new Map<string, number>()
 
   for (const category of categories) {
@@ -32,7 +43,7 @@ const part2 = () => {
  * @description What is the average price of sale items?
  */
 const part3 = () => {
-  const onSaleProducts = productService.getWithFilters({ on_sale: true })
+  const onSaleProducts = productService.getAll()
 
   const averagePriceInCents =
     onSaleProducts.reduce((total, product) => (total += product.priceAsNumberInCents), 0) /
@@ -48,6 +59,7 @@ const part4 = () => {
   const colors = productService
     .getWithFilters({ in_stock: false, gender: 'female' })
     .map((p) => p.color)
+
   const frequencyMap = new Map<string, number>()
 
   for (const color of colors) {
@@ -59,6 +71,7 @@ const part4 = () => {
 }
 
 console.log('Part 1:', part1())
-console.log('Part 2:', part2())
+console.log('Part 2a:', part2({ ignoreDuplicateCategories: false }))
+console.log('Part 2b:', part2({ ignoreDuplicateCategories: true }))
 console.log('Part 3:', part3())
 console.log('Part 4:', part4())

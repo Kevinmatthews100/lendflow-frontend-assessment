@@ -14,8 +14,9 @@ export type Product = {
 }
 
 export type ProductFilter = Partial<
-  Product & { minimumPrice: number; maximumPrice: number } & Omit<
-      Product,
-      'description' | 'picture' | 'price'
-    >
+  Omit<Product, 'description' | 'picture' | 'price' | 'categories'> & {
+    includesCategories: string[]
+    minimumPrice: number
+    maximumPrice: number
+  }
 >

@@ -28,13 +28,13 @@ describe('product service', () => {
 
   test('category filter is correctly applied', () => {
     const filters: ProductFilter = {
-      categories: ['shirts']
+      includesCategories: ['shirts']
     }
 
     const results = productService.getWithFilters(filters)
     const categories = results.map((p) => p.categories)
 
-    expect(categories.includes(['some-other-category'])).toBeFalsy()
+    expect(categories.some((c) => !c.includes('shirts'))).toBeFalsy()
   })
 
   test('minimum price filter is correctly applied', () => {

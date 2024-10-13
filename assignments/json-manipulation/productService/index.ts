@@ -28,8 +28,8 @@ const getWithFilters = (productFilter: ProductFilter): Product[] => {
     }
 
     // These keys (categories, min and max price) require more custom logic
-    if (hasFilter('categories')) {
-      if (!productFilter.categories?.some((c) => product.categories.includes(c))) {
+    if (hasFilter('includesCategories')) {
+      if (!productFilter.includesCategories?.some((c) => product.categories.includes(c))) {
         return false
       }
     }
