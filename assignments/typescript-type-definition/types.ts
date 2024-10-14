@@ -4,8 +4,12 @@ export interface Post {
   content: string | null
 }
 
-export type WithOptionalKeys<Type, Key extends keyof Type> = {
-  [k in Key]?: Type[k]
-} & Omit<Type, Key>
+/**
+ * @description Construct a type with the properties of `Type`, with properties of `Keys`
+ * set to optional
+ */
+export type WithOptionalKeys<Type, Keys extends keyof Type> = {
+  [k in Keys]?: Type[k]
+} & Omit<Type, Keys>
 
 export type NewPost = WithOptionalKeys<Post, 'id'>

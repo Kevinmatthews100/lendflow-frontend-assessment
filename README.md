@@ -1,6 +1,6 @@
 # Lendflow Frontend Assessment
 
-My implementations for all 4 problems listed in the Lendflow Frontend Assessment.
+My implementation of all 4 problems listed in the Lendflow Frontend Assessment.
 
 ### Project Requirements
 

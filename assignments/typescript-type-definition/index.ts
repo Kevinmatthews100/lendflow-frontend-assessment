@@ -14,8 +14,10 @@ const postWithOptionalId: NewPost = {
 // @ts-expect-error Not allowed, id is required for type `Post`
 delete post.id
 
-// We can optionally assign an id to postWithOptionalId!
+console.log('We can optionally assign an id to postWithOptionalId!')
 postWithOptionalId.id = 4
+console.log(postWithOptionalId)
 
-// We can also delete it!
+console.log('We can also delete it!')
 delete postWithOptionalId.id
+console.log(postWithOptionalId)

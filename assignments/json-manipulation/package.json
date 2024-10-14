@@ -1,0 +1,5 @@
+{
+  "name": "json-manipulation",
+  "author": "Kevin Matthews <kevinmatthews100@gmail.com>",
+  "main": "./index.ts"
+}

@@ -1,7 +1,6 @@
 {
   "name": "lendflow-frontend-assessment",
   "author": "Kevin Matthews <kevinmatthews100@gmail.com>",
-  "private": true,
   "scripts": {
     "format": "prettier --write . --ignore-unknown",
     "vitest": "vitest"
