@@ -6,7 +6,7 @@ My implementation of all 4 problems listed in the Lendflow Frontend Assessment.
 
 - [Bun](https://bun.sh/docs/installation) version 1.1.30 or greater.
 
-Bun was choosen so assignments could be written nativly in TypeScript with no setup. This was particuarily useful for the first 3 assignments, `watching-an-object`, `typescript-type-definition`, and `json-manipulation`.
+Bun was choosen so assignments could be written natively in TypeScript with no setup. This was particuarily useful for the first 3 assignments, `watching-an-object`, `typescript-type-definition`, and `json-manipulation`.
 
 ### Project setup
 
