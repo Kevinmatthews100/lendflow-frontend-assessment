@@ -43,11 +43,11 @@ const part2 = ({ ignoreDuplicateCategories }: Part2Options) => {
  * @description What is the average price of sale items?
  */
 const part3 = () => {
-  const onSaleProducts = productService.getAll()
+  const products = productService.getAll()
 
   const averagePriceInCents =
-    onSaleProducts.reduce((total, product) => (total += product.priceAsNumberInCents), 0) /
-    onSaleProducts.length
+    products.reduce((total, product) => (total += product.priceAsNumberInCents), 0) /
+    products.length
 
   return `$${averagePriceInCents / 100}`
 }
